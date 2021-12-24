@@ -12,7 +12,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener-connection host="0.0.0.0" port="${secure::http.Port}" />
 	</http:listener-config>
 	<flow name="dataweave-papi-ravichandrasekharFlow" doc:id="403af048-6030-469a-9ac6-d31e5e72007b" >
-		<http:listener doc:name="/dataweave" doc:id="7b66ba2c-7538-472a-bc48-7f54c0fd15be" config-ref="HTTP_Listener_config" path="/dataweave"/>
+		<http:listener doc:name="/even" doc:id="7b66ba2c-7538-472a-bc48-7f54c0fd15be" config-ref="HTTP_Listener_config" path="/even"/>
 		<set-variable value="#[uuid()]" doc:name="correlationId" doc:id="73ef49ca-8e05-4fee-a61e-b42871199ca2" variableName="correlationId"/>
 		<logger level="INFO" doc:name="displaycorrelationId" doc:id="c6425cd6-0437-4ad9-b3b1-12398329875d" message="correlationId -- #[vars.correlationId] -- flowName -- #[flow.name]"/>
 		<set-payload value="#[1 as Number]" doc:name="gives payload" doc:id="f4b8b091-134c-4ffe-89d7-13b5a50f4458" />
